@@ -43,236 +43,39 @@ import SubLogsListPage from 'pages/logs-page/sub-logs-list';
 import DefaultListPage from 'pages/report/DefaultReport/default-list';
 import PaymentsForm from 'pages/payments/payments-form';
 
-interface UserRouteValidatorProps {
-  children: ReactNode;
-}
+// interface UserRouteValidatorProps {
+//   children: ReactNode;
+// }
 
-const UserRouteValidator: React.FC<UserRouteValidatorProps> = ({ children }) => {
-  const { role } = useLocalData();
-  const [routes, setRoutes, removeRoutes] = useLocalStorage<string>('Routes');
-  const userRoutes = routes ? JSON.parse(routes) : [];
-  const isRouteAccessible = (route: string) => {
-    return userRoutes.includes(route) || role === 'Subscriber';
-  };
+// const UserRouteValidator: React.FC<UserRouteValidatorProps> = ({ children }) => {
+//   const { role } = useLocalData();
+//   const [routes, setRoutes, removeRoutes] = useLocalStorage<string>('Routes');
+//   const userRoutes = routes ? JSON.parse(routes) : [];
+//   const isRouteAccessible = (route: string) => {
+//     return userRoutes.includes(route) || role === 'Subscriber';
+//   };
 
-  return isRouteAccessible(window.location.pathname) ? (
-    <>{children}</>
-  ) : (
-    <Navigate to="/" replace />
-  );
-};
+//   return isRouteAccessible(window.location.pathname) ? (
+//     <>{children}</>
+//   ) : (
+//     <Navigate to="/" replace />
+//   );
+// };
 
 const MainRouter: React.FC = () => {
   return (
     <Routes>
-      <Route element={<PrivateRoutesValidator />}>
-        <Route path="/" element={<Home />}>
-          <Route index element={<WelcomePage />} />
-          <Route element={<AdminRoutesValidator />}>
+      <Route path="/" element={<Home />}>
+        <Route index element={<WelcomePage />} />
+        {/* <Route element={<AdminRoutesValidator />}>
             <Route path="/list/subscribers" element={<SubscriberListPage />} />
             <Route path="/list/menu" element={<MenuListPage />} />
             <Route path="/list/sub-menu" element={<SubMenuListPage />} />
             <Route path="/list/states" element={<StateListPage />} />
             <Route path="/list/cities" element={<CityListPage />} />
             <Route path="/list/logs" element={<LogsListPage />} />
-          </Route>
-          <Route>
-            <Route
-              path={'/list/customers'}
-              element={
-                <UserRouteValidator>
-                  <CustomerListPage />
-                </UserRouteValidator>
-              }
-            />
-            <Route
-              path="/list/sub-logs"
-              element={
-                <UserRouteValidator>
-                  <SubLogsListPage />
-                </UserRouteValidator>
-              }
-            />
-            <Route
-              path={'/list/loans'}
-              element={
-                <UserRouteValidator>
-                  <LoanListPage />
-                </UserRouteValidator>
-              }
-            />
-            <Route
-              path={'/list/sub-cities'}
-              element={
-                <UserRouteValidator>
-                  <SubCityListPage />
-                </UserRouteValidator>
-              }
-            />
-            <Route
-              path={'/list/agents'}
-              element={
-                <UserRouteValidator>
-                  <AgentListPage />
-                </UserRouteValidator>
-              }
-            />
-            <Route
-              path={'/list/showrooms'}
-              element={
-                <UserRouteValidator>
-                  <ShowRoomListPage />
-                </UserRouteValidator>
-              }
-            />
-            <Route
-              path={'/list/branches'}
-              element={
-                <UserRouteValidator>
-                  <BranchListPage />
-                </UserRouteValidator>
-              }
-            />
-            <Route
-              path={'/list/vehicles'}
-              element={
-                <UserRouteValidator>
-                  <VehicleListPage />
-                </UserRouteValidator>
-              }
-            />
-            <Route
-              path={'/list/ledger'}
-              element={
-                <UserRouteValidator>
-                  <LedgerListPage />
-                </UserRouteValidator>
-              }
-            />
-            <Route
-              path={'/customer/create'}
-              element={
-                <UserRouteValidator>
-                  <CustomerForm />
-                </UserRouteValidator>
-              }
-            />
-            <Route
-              path={'/customer/report'}
-              element={
-                <UserRouteValidator>
-                  <CustomerReportPage />
-                </UserRouteValidator>
-              }
-            />
-            <Route
-              path={'/customer/outstanding'}
-              element={
-                <UserRouteValidator>
-                  <PendingDuesListPage />
-                </UserRouteValidator>
-              }
-            />
-            <Route
-              path={'/report/documents'}
-              element={
-                <UserRouteValidator>
-                  <DocumentPendingListPage />
-                </UserRouteValidator>
-              }
-            />
-            <Route
-              path={'/report/daybook'}
-              element={
-                <UserRouteValidator>
-                  <DaybookPage />
-                </UserRouteValidator>
-              }
-            />
-            <Route
-              path={'/report/default'}
-              element={
-                <UserRouteValidator>
-                  <DefaultListPage />
-                </UserRouteValidator>
-              }
-            />
-            <Route
-              path={'/customer/due-view/:LoanId'}
-              element={
-                <UserRouteValidator>
-                  <CustomerReportPage />
-                </UserRouteValidator>
-              }
-            />
-            <Route
-              path={'/loan/create'}
-              element={
-                <UserRouteValidator>
-                  <LoanForm />
-                </UserRouteValidator>
-              }
-            />
-            <Route
-              path={'/loan/preclose'}
-              element={
-                <UserRouteValidator>
-                  <LoanPreclosePage />
-                </UserRouteValidator>
-              }
-            />
-            <Route
-              path={'/report/pending'}
-              element={
-                <UserRouteValidator>
-                  <PendingListPage />
-                </UserRouteValidator>
-              }
-            />
-            <Route
-              path={'/payments'}
-              element={
-                <UserRouteValidator>
-                  <PaymentsForm />
-                </UserRouteValidator>
-              }
-            />
-            <Route
-              path={'/list/users'}
-              element={
-                <UserRouteValidator>
-                  <UsersListPage />
-                </UserRouteValidator>
-              }
-            />
-          </Route>
-          <Route
-            path="/profile"
-            element={
-              <>
-                <ProfileLayout />
-                <Profile />
-              </>
-            }
-          />
-          <Route
-            path="/password-settings"
-            element={
-              <>
-                <ProfileLayout />
-                <PasswordSettingsView />
-              </>
-            }
-          />
-        </Route>
+          </Route> */}
       </Route>
-      <Route element={<OtpRouteValidator />}>
-        <Route path="otp-page" element={<OtpPage />} />
-      </Route>
-      <Route path="login" element={<Login />} />
-      <Route path="sign-in" element={<SignIn />} />
-      <Route path="forget-password" element={<ForgotPassword />} />
-      <Route path="sign-up" element={<SignUp />} />
       <Route path="*" element={<NotFoundPage />} />
     </Routes>
   );

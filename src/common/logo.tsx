@@ -18,7 +18,7 @@ export default function Logo({ iconOnly = false, ...props }: IconProps) {
         <div>
           <h4>Sazs Apps</h4>
           <Text className="font-medium text-xs">
-            {loginUser.CompanyName ? loginUser?.CompanyName : 'Sazs Finance Software'}
+            {loginUser.CompanyName ? loginUser?.CompanyName : 'Aggregate Shopping Card'}
           </Text>
         </div>
       )}

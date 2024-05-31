@@ -37,136 +37,141 @@ export const SubscriberItems: StaticMenuItem[] = [
     icon: <PiTableDuotone />,
     dropdownItems: [
       {
-        name: 'Create Customer',
-        href: '/customer/create',
+        name: 'Shop',
+        href: '/e-commerce/Shop',
         icon: <PiFolderNotchDuotone />,
       },
       {
-        name: 'Customers List',
-        href: '/list/customers',
+        name: 'Products',
+        href: '/e-commerce/Products',
         icon: <PiFolderNotchDuotone />,
       },
       {
-        name: 'Customer Statement',
-        href: '/customer/report',
+        name: 'Product Details',
+        href: '/e-commerce/ProductDetails',
         icon: <PiFolderNotchDuotone />,
       },
       {
-        name: 'Outstanding Customer',
-        href: '/customer/outstanding',
+        name: 'Orders',
+        href: '/e-commerce/Orders',
+        icon: <PiFolderNotchDuotone />,
+      },
+      {
+        name: 'Reviews',
+        href: '/e-commerce/Reviews',
         icon: <PiFolderNotchDuotone />,
       },
     ],
   },
-  {
-    name: 'Loan Master',
-    href: '#',
-    icon: <PiTableDuotone />,
-    dropdownItems: [
-      {
-        name: 'Create Loan',
-        href: '/loan/create',
-        icon: <PiFolderNotchDuotone />,
-      },
-      {
-        name: 'Loan List',
-        href: '/list/loans',
-        icon: <PiFolderNotchDuotone />,
-      },
-      {
-        name: 'Loan Preclose',
-        href: '/loan/preclose',
-        icon: <PiFolderNotchDuotone />,
-      },
-    ],
-  },
-  {
-    name: 'Finance Master',
-    href: '#',
-    icon: <PiTableDuotone />,
-    dropdownItems: [
-      {
-        name: 'City List',
-        href: '/list/sub-cities',
-        icon: <PiFolderNotchDuotone />,
-      },
-      {
-        name: 'Agents List',
-        href: '/list/agents',
-        icon: <PiFolderNotchDuotone />,
-      },
-      {
-        name: 'Branch List',
-        href: '/list/branches',
-        icon: <PiFolderNotchDuotone />,
-      },
-      {
-        name: 'ShowRoom List',
-        href: '/list/showrooms',
-        icon: <PiFolderNotchDuotone />,
-      },
+  // {
+  //   name: 'Loan Master',
+  //   href: '#',
+  //   icon: <PiTableDuotone />,
+  //   dropdownItems: [
+  //     {
+  //       name: 'Create Loan',
+  //       href: '/loan/create',
+  //       icon: <PiFolderNotchDuotone />,
+  //     },
+  //     {
+  //       name: 'Loan List',
+  //       href: '/list/loans',
+  //       icon: <PiFolderNotchDuotone />,
+  //     },
+  //     {
+  //       name: 'Loan Preclose',
+  //       href: '/loan/preclose',
+  //       icon: <PiFolderNotchDuotone />,
+  //     },
+  //   ],
+  // },
+  // {
+  //   name: 'Finance Master',
+  //   href: '#',
+  //   icon: <PiTableDuotone />,
+  //   dropdownItems: [
+  //     {
+  //       name: 'City List',
+  //       href: '/list/sub-cities',
+  //       icon: <PiFolderNotchDuotone />,
+  //     },
+  //     {
+  //       name: 'Agents List',
+  //       href: '/list/agents',
+  //       icon: <PiFolderNotchDuotone />,
+  //     },
+  //     {
+  //       name: 'Branch List',
+  //       href: '/list/branches',
+  //       icon: <PiFolderNotchDuotone />,
+  //     },
+  //     {
+  //       name: 'ShowRoom List',
+  //       href: '/list/showrooms',
+  //       icon: <PiFolderNotchDuotone />,
+  //     },
 
-      {
-        name: 'Vehicle List',
-        href: '/list/vehicles',
-        icon: <PiFolderNotchDuotone />,
-      },
-    ],
-  },
-  {
-    name: 'Ledger',
-    href: '/list/ledger',
-    icon: <PiFolderNotchDuotone />,
-  },
-  {
-    name: 'Report',
-    href: '#',
-    icon: <PiTableDuotone />,
-    dropdownItems: [
-      {
-        name: 'Pending Report',
-        href: '/report/pending',
-        badge: 'new',
-      },
-      {
-        name: 'Documnets Report',
-        href: '/report/documents',
-        badge: 'new',
-      },
-      {
-        name: 'DayBook',
-        href: '/report/daybook',
-        badge: 'new',
-      },
-      {
-        name: 'Default Report',
-        href: '/report/Default',
-        badge: 'new',
-      },
-    ],
-  },
-  {
-    name: 'User Management',
-    href: '#',
-    icon: <PiTableDuotone />,
-    dropdownItems: [
-      {
-        name: 'Users List',
-        href: '/list/users',
-        badge: 'new',
-      },
-    ],
-  },
-  {
-    name: 'Logs',
-    href: '/list/sub-logs',
-    icon: <PiTableDuotone />,
-  },
-  {
-    name: 'Payments',
-    href: '/payments',
-    icon: <PiTableDuotone />,
-  },
+  //     {
+  //       name: 'Vehicle List',
+  //       href: '/list/vehicles',
+  //       icon: <PiFolderNotchDuotone />,
+  //     },
+  //   ],
+  // },
+  // {
+  //   name: 'Ledger',
+  //   href: '/list/ledger',
+  //   icon: <PiFolderNotchDuotone />,
+  // },
+  // {
+  //   name: 'Report',
+  //   href: '#',
+  //   icon: <PiTableDuotone />,
+  //   dropdownItems: [
+  //     {
+  //       name: 'Pending Report',
+  //       href: '/report/pending',
+  //       badge: 'new',
+  //     },
+  //     {
+  //       name: 'Documnets Report',
+  //       href: '/report/documents',
+  //       badge: 'new',
+  //     },
+  //     {
+  //       name: 'DayBook',
+  //       href: '/report/daybook',
+  //       badge: 'new',
+  //     },
+  //     {
+  //       name: 'Default Report',
+  //       href: '/report/Default',
+  //       badge: 'new',
+  //     },
+  //   ],
+  // },
+  // {
+  //   name: 'User Management',
+  //   href: '#',
+  //   icon: <PiTableDuotone />,
+  //   dropdownItems: [
+  //     {
+  //       name: 'Users List',
+  //       href: '/list/users',
+  //       badge: 'new',
+  //     },
+  //   ],
+  // },
+  // {
+  //   name: 'Logs',
+  //   href: '/list/sub-logs',
+  //   icon: <PiTableDuotone />,
+  // },
+  // {
+  //   name: 'Payments',
+  //   href: '/payments',
+  //   icon: <PiTableDuotone />,
+  // },
 ];
 
 export const AdminItems: StaticMenuItem[] = [
