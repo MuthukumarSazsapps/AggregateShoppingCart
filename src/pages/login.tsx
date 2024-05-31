@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { cn } from 'utils';
 import OrSeparation from 'common/auth-layout/or-separation';
-// import LoginForm from './login-form';
+import LoginForm from './login-form';
 
 const Login = () => {
   return (
@@ -17,7 +17,7 @@ const Login = () => {
         </div>
 
         <OrSeparation title={`Sign in with UserName and Password`} isCenter className="mb-4" />
-        {/* <LoginForm /> */}
+        <LoginForm />
       </div>
     </div>
   );

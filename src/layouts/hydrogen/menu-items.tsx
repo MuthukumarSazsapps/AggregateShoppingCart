@@ -1,5 +1,5 @@
 import { AiFillHome } from 'react-icons/ai';
-import { routes } from 'config/routes';
+import { routes } from '../../config/routes';
 import {
   PiTableDuotone,
   PiUserPlusDuotone,

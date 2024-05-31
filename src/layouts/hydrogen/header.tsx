@@ -1,14 +1,14 @@
 'use client';
 
 // import Link from 'next/link';
-import HamburgerButton from './hamburger-button';
-import SearchWidget from 'components/search/search';
-import Sidebar from './sidebar'; //using in own hydragon instead of finance in lithiumn
+import HamburgerButton from '../../layouts/hamburger-button';
+import SearchWidget from '../../components/search/search';
+import Sidebar from 'layouts/BeryLlium/beryllium-sidebar-drawer';
 import { cn } from 'utils';
-import Logo from 'common/logo';
+import Logo from '../../common/logo';
 import { useIsMounted } from '../../hooks/use-is-mounted';
 import { useWindowScroll } from 'react-use';
-import HeaderMenuRight from './header-menu-right';
+import HeaderMenuRight from '../../layouts/header-menu-right';
 
 export default function Header() {
   const isMounted = useIsMounted();

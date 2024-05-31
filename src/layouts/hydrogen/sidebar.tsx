@@ -5,9 +5,9 @@ import { Title } from 'rizzui';
 import { Collapse } from 'rizzui';
 import { cn } from 'utils';
 import { PiCaretDownBold, PiTableDuotone } from 'react-icons/pi';
-import SimpleBar from 'simplebar-react';
-import Logo from 'common/logo';
-import StatusBadge from 'common/get-status-badge';
+import SimpleBar from '../../common/simplebar';
+import Logo from '../../common/logo';
+import StatusBadge from '../../common/get-status-badge';
 import useSidebar from 'hooks/use-sidebar';
 import useLocalData from 'hooks/use-localData';
 type menuItem = {
@@ -39,10 +39,10 @@ export default function Sidebar({ className }: { className?: string }) {
 
       <SimpleBar className="h-[calc(100%-80px)]">
         <div className="mt-4 pb-3 3xl:mt-6">
-          {userMenus.map((item: any, index: any) => {
+          {userMenus.map((item, index) => {
             const isActive = pathname === (item?.href as string);
             const pathnameExistInDropdowns: any = item?.dropdownItems?.filter(
-              (dropdownItem: any) => dropdownItem.href === pathname,
+              dropdownItem => dropdownItem.href === pathname,
             );
             const isDropdownOpen = Boolean(pathnameExistInDropdowns?.length);
 
@@ -97,7 +97,7 @@ export default function Sidebar({ className }: { className?: string }) {
                             />
                           </div>
                         )}>
-                        {item?.dropdownItems?.map((dropdownItem: any, index: any) => {
+                        {item?.dropdownItems?.map((dropdownItem, index) => {
                           const isChildActive = pathname === (dropdownItem?.href as string);
 
                           return (
