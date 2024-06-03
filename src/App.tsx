@@ -9,18 +9,21 @@ import { Toaster } from 'react-hot-toast';
 import { DndProvider } from 'react-dnd';
 import { HTML5Backend } from 'react-dnd-html5-backend';
 import MainRouter from 'routes';
+import { CartProvider } from 'store/quick-cart/cart.context';
 
 const App: React.FC = () => {
   return (
     <BrowserRouter>
       <ThemeProvider>
         <DndProvider backend={HTML5Backend}>
-          <Provider store={store}>
-            <MainRouter />
-            <Toaster />
-            <GlobalDrawer />
-            <GlobalModal />
-          </Provider>
+          <CartProvider>
+            <Provider store={store}>
+              <MainRouter />
+              <Toaster />
+              <GlobalDrawer />
+              <GlobalModal />
+            </Provider>
+          </CartProvider>
         </DndProvider>
       </ThemeProvider>
     </BrowserRouter>

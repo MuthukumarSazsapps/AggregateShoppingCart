@@ -1,9 +1,10 @@
+// import Link from 'next/link';
 import { Link } from 'react-router-dom';
 import { routes } from 'config/routes';
 import { Title } from 'rizzui';
-import Button from 'common/button';
+import { Button } from 'rizzui';
 import ProductModernCard from 'components/cards/product-modern-card';
-import { similarProducts } from './form/similar-products-data';
+import { similarProducts } from '../shop/form/similar-products-data';
 
 export default function ProductDetailsRelatedProducts() {
   return (

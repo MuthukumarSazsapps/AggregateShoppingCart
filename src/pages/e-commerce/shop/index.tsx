@@ -20,9 +20,9 @@ export default function ProductDetailsPage({ params }: any) {
         href: routes.eCommerce.shop,
         name: 'Shop',
       },
-      {
-        name: params.slug,
-      },
+      // {
+      //   name: params.slug,
+      // },
     ],
   };
   return (

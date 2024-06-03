@@ -121,4 +121,5 @@ export const messages = {
   ledgerNameRequired: 'Ledger Name Required ',
   ledgerDescriptionRequired: 'Description Required',
   ledgerOpeningBalance: 'Opening Balance Required',
+  productSizeRequired: 'Product Size is Required',
 };

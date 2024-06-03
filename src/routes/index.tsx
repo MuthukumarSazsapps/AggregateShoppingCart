@@ -42,6 +42,8 @@ import DaybookPage from 'pages/day-book/daybook';
 import SubLogsListPage from 'pages/logs-page/sub-logs-list';
 import DefaultListPage from 'pages/report/DefaultReport/default-list';
 import PaymentsForm from 'pages/payments/payments-form';
+import ProductDetailsPage from 'pages/e-commerce/shop';
+import PointOfSalePage from 'pages/e-commerce/point-of-sale/page';
 
 // interface UserRouteValidatorProps {
 //   children: ReactNode;
@@ -67,6 +69,9 @@ const MainRouter: React.FC = () => {
     <Routes>
       <Route path="/" element={<Home />}>
         <Route index element={<WelcomePage />} />
+        <Route path="/e-commerce/Shop" element={<ProductDetailsPage />} />
+        <Route path="/e-commerce/productSales" element={<PointOfSalePage />} />
+
         {/* <Route element={<AdminRoutesValidator />}>
             <Route path="/list/subscribers" element={<SubscriberListPage />} />
             <Route path="/list/menu" element={<MenuListPage />} />

@@ -7,6 +7,7 @@ import {
   PiLockKeyDuotone,
   PiChatCenteredDotsDuotone,
   PiFolderNotchDuotone,
+  PiCreditCardDuotone,
 } from 'react-icons/pi';
 
 export type StaticSubMenuItem = {
@@ -60,6 +61,12 @@ export const SubscriberItems: StaticMenuItem[] = [
         name: 'Reviews',
         href: '/e-commerce/Reviews',
         icon: <PiFolderNotchDuotone />,
+      },
+      {
+        name: 'Point of Sale',
+        href: '/e-commerce/productSales',
+        icon: <PiCreditCardDuotone />,
+        badge: 'Update',
       },
     ],
   },

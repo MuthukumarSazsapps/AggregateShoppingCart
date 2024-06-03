@@ -15,7 +15,7 @@ import {
   productThumb14,
   productThumb15,
   productThumb16,
-} from '@/data/base64-images';
+} from '../base64-images';
 
 export const modernProductsGrid = [
   {

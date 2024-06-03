@@ -2,7 +2,7 @@
 
 import { Title, Text } from 'rizzui';
 import { SubmitHandler } from 'react-hook-form';
-import { Form } from 'common/form';
+import { Form } from 'components/ui/form';
 import { Input } from 'rizzui';
 import { Button } from 'rizzui';
 import { Collapse } from 'rizzui';
