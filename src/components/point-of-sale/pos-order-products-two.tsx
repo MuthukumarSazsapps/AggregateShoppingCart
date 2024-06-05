@@ -70,7 +70,7 @@ export default function POSOrderProductsTwo({
                   <div className="flex items-end justify-between">
                     <div className="flex gap-1 flex-col">
                       <div className="text-xs font-medium text-gray-500">
-                        {toCurrency(item?.salePrice ?? item.price)} x {item.quantity}
+                        {toCurrency(item?.salePrice ?? item.price)} x {item.quantity} Unit
                       </div>
                       <div className="flex items-center gap-3 whitespace-nowrap font-semibold text-gray-900">
                         {toCurrency((item?.salePrice ?? item.price) * item.quantity)}

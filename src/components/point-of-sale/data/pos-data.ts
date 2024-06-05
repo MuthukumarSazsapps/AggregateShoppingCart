@@ -7,8 +7,8 @@ export const posProducts = [
     description: 'South Asian dish',
     image:
       'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP09Vy4tHQyTdEpOFlOR-QBpXd3ipJsO8mZg&s',
-    price: 320,
-    salePrice: 295,
+    price: 4700,
+    salePrice: 4200,
     quantity: 10,
     size: 50,
     discount: 15,
@@ -21,8 +21,8 @@ export const posProducts = [
     description: 'Packaging Size: 3.5 at Rs 900/tonne',
     image:
       'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmkJ6VD1HqmnhxFOrXcqKElZR_8g6PcVLx7A&s',
-    price: 320,
-    salePrice: 295,
+    price: 5200,
+    salePrice: 4800,
     quantity: 10,
     size: 50,
     discount: 15,

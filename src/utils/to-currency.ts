@@ -1,7 +1,7 @@
 export function toCurrency(number: number | string, disableDecimal = false, decimalPlaces = 2) {
-  const formatter = new Intl.NumberFormat('en-US', {
+  const formatter = new Intl.NumberFormat('en-IN', {
     style: 'currency',
-    currency: 'USD',
+    currency: 'INR',
     minimumFractionDigits: disableDecimal ? 0 : decimalPlaces,
     maximumFractionDigits: disableDecimal ? 0 : decimalPlaces,
   });

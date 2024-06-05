@@ -58,7 +58,8 @@ export default function POSProductCategory() {
             className="inline-flex shrink-0 gap-1.5 scroll-smooth focus-visible:border-0 focus-visible:ring-0 active:ring-0 focus-visible:enabled:border-0"
             onClick={() => handleFilter(option.value, idx + 1)}>
             <span>
-              <Icon className="h-5 w-5" />
+              {/* <Icon className="h-5 w-5" /> */}
+              <img src={option.url} alt="categoryLogo" width={45} height={10} className="p-2" />
             </span>
             {option.name}
           </Button>

@@ -55,9 +55,11 @@ export default function ProductClassicCard({ product, className }: ProductProps)
         </Text>
         <div className="mt-2 flex items-center font-semibold text-gray-900">
           {toCurrency(Number(salePrice))}
+          {/* {salePrice} */}
           {price && (
             <del className="ps-1.5 text-[13px] font-normal text-gray-500">
               {toCurrency(Number(price))}
+              {/* {price} */}
             </del>
           )}
         </div>

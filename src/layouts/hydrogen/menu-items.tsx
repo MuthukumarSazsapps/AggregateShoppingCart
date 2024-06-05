@@ -77,14 +77,14 @@ export const SubscriberItems: StaticMenuItem[] = [
   //   dropdownItems: [
   //     {
   //       name: 'Create Loan',
-  //       href: '/loan/create',
+  //       href: '/',
   //       icon: <PiFolderNotchDuotone />,
   //     },
   //     {
   //       name: 'Loan List',
   //       href: '/list/loans',
   //       icon: <PiFolderNotchDuotone />,
-  //     },
+  //     }
   //     {
   //       name: 'Loan Preclose',
   //       href: '/loan/preclose',
