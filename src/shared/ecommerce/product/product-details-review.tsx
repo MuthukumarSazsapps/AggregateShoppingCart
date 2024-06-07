@@ -2,7 +2,7 @@
 
 import { cn } from 'utils';
 import { PiCaretDownBold } from 'react-icons/pi';
-import { Collapse } from 'rizzui';
+import { Collapse } from 'components/ui/collapse';
 import ReviewCard from 'components/cards/review-card';
 import ProductReviewForm from './product-review-form';
 import RatingProgressBar from 'components/rating-progress-bar';
