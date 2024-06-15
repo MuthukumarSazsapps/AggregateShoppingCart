@@ -19,7 +19,7 @@ export default function FormGroup({
     <div className={cn('grid gap-3 @3xl:grid-cols-12', className)}>
       {title && (
         <div className="col-span-full @4xl:col-span-4">
-          <h4 className="text-medium text-violet-800 font-bold ">{title}</h4>
+          <h4 className="text-medium text-violet-800 font-bold ">{title}g</h4>
           {description && <p className="mt-2 text-violet-800 text-xs">{description}</p>}
         </div>
       )}

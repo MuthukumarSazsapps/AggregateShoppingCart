@@ -1,5 +1,7 @@
 import { AiFillHome } from 'react-icons/ai';
 import { routes } from '../../config/routes';
+import { DUMMY_ID } from 'config/constants';
+
 import {
   PiTableDuotone,
   PiUserPlusDuotone,
@@ -8,6 +10,7 @@ import {
   PiChatCenteredDotsDuotone,
   PiFolderNotchDuotone,
   PiCreditCardDuotone,
+  PiShoppingCartDuotone,
 } from 'react-icons/pi';
 
 export type StaticSubMenuItem = {
@@ -33,40 +36,70 @@ export const StaticMenuItems: StaticMenuItem[] = [
 
 export const SubscriberItems: StaticMenuItem[] = [
   {
-    name: 'Customer Management',
+    name: 'E-Commerce',
     href: '#',
-    icon: <PiTableDuotone />,
+    icon: <PiShoppingCartDuotone />,
     dropdownItems: [
       {
-        name: 'Shop',
-        href: '/e-commerce/Shop',
-        icon: <PiFolderNotchDuotone />,
-      },
-      {
         name: 'Products',
-        href: '/e-commerce/Products',
-        icon: <PiFolderNotchDuotone />,
+        href: routes.eCommerce.products,
+        badge: '',
       },
       {
         name: 'Product Details',
-        href: '/e-commerce/ProductDetails',
-        icon: <PiFolderNotchDuotone />,
+        href: routes.eCommerce.productDetails(DUMMY_ID),
+      },
+      {
+        name: 'Create Product',
+        href: routes.eCommerce.createProduct,
+      },
+      {
+        name: 'Edit Product',
+        href: routes.eCommerce.ediProduct(DUMMY_ID),
+      },
+      {
+        name: 'Categories',
+        href: routes.eCommerce.categories,
+      },
+      {
+        name: 'Create Category',
+        href: routes.eCommerce.createCategory,
+      },
+      {
+        name: 'Edit Category',
+        href: routes.eCommerce.editCategory(DUMMY_ID),
       },
       {
         name: 'Orders',
-        href: '/e-commerce/Orders',
-        icon: <PiFolderNotchDuotone />,
+        href: routes.eCommerce.orders,
+      },
+      {
+        name: 'Order Details',
+        href: routes.eCommerce.orderDetails(DUMMY_ID),
+      },
+      {
+        name: 'Create Order',
+        href: routes.eCommerce.createOrder,
+      },
+      {
+        name: 'Edit Order',
+        href: routes.eCommerce.editOrder(DUMMY_ID),
       },
       {
         name: 'Reviews',
-        href: '/e-commerce/Reviews',
-        icon: <PiFolderNotchDuotone />,
+        href: routes.eCommerce.reviews,
       },
       {
-        name: 'Point of Sale',
-        href: '/e-commerce/productSales',
-        icon: <PiCreditCardDuotone />,
-        badge: 'Update',
+        name: 'Shop',
+        href: routes.eCommerce.shop,
+      },
+      {
+        name: 'Cart',
+        href: routes.eCommerce.cart,
+      },
+      {
+        name: 'Checkout & Payment',
+        href: routes.eCommerce.checkout,
       },
     ],
   },

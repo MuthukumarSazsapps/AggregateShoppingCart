@@ -1,14 +1,14 @@
 import { routes } from 'config/routes';
 import PageHeader from 'shared/page-header';
-import CartTemplate from 'shared/ecommerce/cart';
+import CheckoutPageWrapper from 'shared/ecommerce/checkout';
 import { metaObject } from 'config/site.config';
 
 export const metadata = {
-  ...metaObject('Cart'),
+  ...metaObject('Checkout'),
 };
 
 const pageHeader = {
-  title: 'Cart',
+  title: 'Checkout',
   breadcrumb: [
     {
       name: 'Home',
@@ -18,16 +18,16 @@ const pageHeader = {
       name: 'E-Commerce',
     },
     {
-      name: 'Cart',
+      name: 'Checkout',
     },
   ],
 };
 
-export default function CartPage() {
+export default function CheckoutPage() {
   return (
     <>
       <PageHeader title={pageHeader.title} breadcrumb={pageHeader.breadcrumb} />
-      <CartTemplate />
+      <CheckoutPageWrapper />
     </>
   );
 }

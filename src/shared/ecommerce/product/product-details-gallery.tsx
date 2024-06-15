@@ -1,4 +1,4 @@
-import Image from 'next/image';
+// import Image from 'next/image';
 
 const productGallery = [
   {
@@ -26,7 +26,7 @@ export default function ProductDetailsGallery() {
         <div
           key={`product-gallery-${idx}`}
           className="relative mx-auto aspect-[4/4.65] w-full overflow-hidden rounded bg-gray-100 @xl:rounded-md">
-          <Image
+          {/* <Image
             fill
             priority
             src={image.src}
@@ -35,7 +35,8 @@ export default function ProductDetailsGallery() {
             alt={'Product Gallery'}
             sizes="(max-width: 768px) 100vw"
             className="h-full w-full object-cover"
-          />
+          /> */}
+          <img src={image.src} alt={'Product Gallery'} className="h-full w-full object-cover" />
         </div>
       ))}
     </div>

@@ -19,6 +19,7 @@
     "@hookform/resolvers": "3.3.2",
     "@reduxjs/toolkit": "^2.0.1",
     "@tailwindcss/container-queries": "0.1.1",
+    "@types/react-scroll": "^1.8.10",
     "@uploadthing/react": "5.7.0",
     "axios": "^1.6.2",
     "dayjs": "1.11.10",
